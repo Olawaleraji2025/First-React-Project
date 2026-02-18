@@ -1,0 +1,30 @@
+.Add-btn{
+    display: flex;
+    margin: 20px auto;
+    justify-content: center;
+    width: auto;
+    background-color: hsl(26, 100%, 55%);
+    outline: none;
+    border: none;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.qty-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+/* .qty-btn span{
+    font-weight: bold;
+    font-size: 1.2rem;
+} */
+
+.decrease-btn, .increase-btn{
+    color: hsl(26, 100%, 55%);
+    font-size: 1.6rem;
+    font-weight: bolder;
+    cursor: pointer;
+}

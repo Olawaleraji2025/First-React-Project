@@ -1,0 +1,33 @@
+.side-bar-container{
+    position: fixed;
+    top: 0px;
+    left: -250px; /* Start off-screen to the left */
+    width: 250px;
+    height: 100vh; /* Full height for better UX */
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: left 0.3s ease; /* Smooth slide animation */
+}
+
+.side-bar-container.open {
+    left: 0; /* Slide in from left */
+}
+
+/* Removed old animation as transition is smoother and more performant */
+/* As a senior developer, I recommend using CSS transitions over keyframes for simple animations
+   as they are more efficient and easier to control. */
+
+
+
+.links{
+    list-style-type: none;
+    line-height: 2;
+    display: block;
+    padding: 20px;
+}
+
+.close-icon{
+    display: block;
+    margin: 15px 20px auto;
+}

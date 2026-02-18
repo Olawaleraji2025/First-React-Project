@@ -1,0 +1,33 @@
+.Modal-container{
+    position: absolute;
+    background: #fff;
+    width: 80%;
+    /* left: 10px; */
+    top: 90px;
+    translate: 7% 0%;
+    padding: 10px;
+    border-radius: 3%;
+    /* margin: 0 auto; */
+
+}
+
+.Modal-header{
+    font-size: medium;
+    margin: 0 auto;
+}
+
+.Modal-p{
+    display: block;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.image-item{
+    width: 50px;
+}
+
+.modal-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

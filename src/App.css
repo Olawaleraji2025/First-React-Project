@@ -1,0 +1,30 @@
+.text{
+    display: flex;
+    justify-content: center;
+    font-size: 32px;
+    text-align: center;
+}
+
+/* Product container - responsive layout */
+.first-product-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+/* Above 900px: display side by side */
+@media (min-width: 901px) {
+    .first-product-container {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    .second-product-container{
+        max-width: 500px;
+    }
+}

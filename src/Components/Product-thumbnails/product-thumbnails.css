@@ -1,0 +1,13 @@
+.thumb-images{
+    display: flex;
+    gap: 10px;
+}
+
+.thumb-images img{
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}

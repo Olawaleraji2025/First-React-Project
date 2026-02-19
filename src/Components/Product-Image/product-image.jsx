@@ -1,5 +1,6 @@
 import { useState } from "react";
-import "./product-image.css";
+import "./product-image.css"
+import ImageThumbnails from "../Product-thumbnails/product-thumbnail";
 
 function MainSection() {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -40,6 +41,10 @@ function MainSection() {
             <div className="next-icon" onClick={() => handleSliding('next')}>
                 <img src="./src/assets/images/icon-next.svg" alt="Next" /> 
             </div>
+        </div>
+
+        <div>
+            <ImageThumbnails />
         </div>
         
         </>

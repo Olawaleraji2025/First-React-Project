@@ -16,10 +16,10 @@ function MainSection() {
     }
 
     const images = [
-        "public/images/image-product-1.jpg",
-        "public/images/image-product-2.jpg",
-        "public/images/image-product-3.jpg",
-        "public/images/image-product-4.jpg"
+        "public/image-product-1.jpg",
+        "public/image-product-2.jpg",
+        "public/image-product-3.jpg",
+        "public/image-product-4.jpg"
     ];
 
     return (
@@ -36,10 +36,10 @@ function MainSection() {
         </div>
         <div className="direction-container">
             <div className="prev-icon" onClick={() => handleSliding('prev')}>
-                <img src="public/images/icon-previous.svg" alt="Previous" /> 
+                <img src="public/icon-previous.svg" alt="Previous" /> 
             </div>
             <div className="next-icon" onClick={() => handleSliding('next')}>
-                <img src="public/images/icon-next.svg" alt="Next" /> 
+                <img src="public/icon-next.svg" alt="Next" /> 
             </div>
         </div>
 

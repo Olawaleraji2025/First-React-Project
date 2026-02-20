@@ -9,7 +9,7 @@ function SideMenu({ isOpen, onClose }) {
 
     return (
         <div className={isOpen ? 'side-bar-container open' : 'side-bar-container'}>
-            <img src="public/images/icon-close.svg" alt="Close sidebar" className="close-icon" onClick={onClose} />
+            <img src="public/icon-close.svg" alt="Close sidebar" className="close-icon" onClick={onClose} />
             <ul className="links">
                 <li>Collections</li>
                 <li>Men</li>

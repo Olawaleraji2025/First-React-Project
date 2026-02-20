@@ -28,7 +28,7 @@ function NavBar({ qty, item }) {
         <>
 <div className='nav-bar-container'>
     <div>
-    <img className='icon-menu' src="../public/icon-menu.svg" alt="icon-menu-img" onClick={handleSideBar} />
+    <img className='icon-menu' src="../icon-menu.svg" alt="icon-menu-img" onClick={handleSideBar} />
     <img src="/public/logo.svg" alt="Sneakers-logo-image" />
 
     </div>

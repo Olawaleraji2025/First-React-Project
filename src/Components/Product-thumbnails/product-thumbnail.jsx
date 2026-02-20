@@ -1,6 +1,6 @@
 import '/src/Components/Product-thumbnails/product-thumbnails.css';
 import { useState } from "react";
-// import {ModalView} from "./src/Components/Product-View/product-view.jsx"
+import { ModalView } from "../Product-View/product-view.jsx"; 
 
 
 function ImageThumbnails() {
@@ -22,7 +22,7 @@ function handleModalViewDisplay() {
 
     </div>
 
-    {/* {isModalOn && <ModalView /> } */}
+    {isModalOn && <ModalView /> }
     
     
     </>)

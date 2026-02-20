@@ -28,8 +28,8 @@ function NavBar({ qty, item }) {
         <>
 <div className='nav-bar-container'>
     <div>
-    <img className='icon-menu' src="src/assets/images/icon-menu.svg" alt="icon-menu-img" onClick={handleSideBar} />
-    <img src="src/assets/images/logo.svg" alt="Sneakers-logo-image" />
+    <img className='icon-menu' src="public/images/icon-menu.svg" alt="icon-menu-img" onClick={handleSideBar} />
+    <img src="public/images/logo.svg" alt="Sneakers-logo-image" />
 
     </div>
 
@@ -43,11 +43,11 @@ function NavBar({ qty, item }) {
 
 <div className='cart-Avatar'  >
 
-    <img src="src/assets/images/icon-cart.svg" alt="icon-menu-img" className='cart' onClick={HandleEmptyCart} />
+    <img src="public/images/icon-cart.svg" alt="icon-menu-img" className='cart' onClick={HandleEmptyCart} />
     <div className='qty'>
         <span className='qty-text'>{qty}</span>
     </div>
-    <img className='Avatar' src="src/assets/images/image-avatar.png" alt="Sneakers-logo-image" />
+    <img className='Avatar' src="public/images/image-avatar.png" alt="Sneakers-logo-image" />
 </div>
 
 </div>

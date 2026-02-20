@@ -16,8 +16,8 @@ function MainSection() {
     }
 
     const images = [
-        "public/image-product-1.jpg",
-        "public/image-product-2.jpg",
+        "public\image-product-1.jpg",
+        "public\image-product-2.jpg",
         "public/image-product-3.jpg",
         "public/image-product-4.jpg"
     ];

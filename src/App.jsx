@@ -15,7 +15,7 @@ function App() {
   const [qty, setQty] = useState(0);
   const [title] = useState(`Fall Limited Edition Sneakers`);
   const [price] = useState(125);
-  const [Image] = useState("./public/images/image-product-1.jpg");
+  const [Image] = useState("./public/image-product-1.jpg");
   // item state stores the product that was added to cart
   const [item, setItem] = useState(null);
   

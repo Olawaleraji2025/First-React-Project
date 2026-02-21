@@ -47,7 +47,7 @@ function NavBar({ qty, item }) {
     <div className='qty'>
         <span className='qty-text'>{qty}</span>
     </div>
-    <img className='Avatar' src="../image-avatar.png" alt="Sneakers-logo-image" />
+    <img className='Avatar' src="../image-avatar.png" alt="Avatar-image" />
 </div>
 
 </div>

@@ -4,7 +4,7 @@ import { ModalView } from "../Product-View/product-view.jsx";
 
 
 function ImageThumbnails() {
-const [isModalOn, setIsModalOn] = useState(null);
+const [isModalOn, setIsModalOn] = useState(false);
 
 
 function handleModalViewDisplay() {
@@ -22,7 +22,7 @@ function handleModalViewDisplay() {
 
     </div>
 
-    {isModalOn && <ModalView /> }
+    {isModalOn && <ModalView onClose={isModalOn} toggle={handleModalViewDisplay}  /> }
     
     
     </>)

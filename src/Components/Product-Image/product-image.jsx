@@ -1,19 +1,9 @@
-import { useState } from "react";
 import "./product-image.css"
 import ImageThumbnails from "../Product-thumbnails/product-thumbnail";
+import useSliding from "../../hooks/useSliding";
 
 function MainSection() {
-    const [currentSlide, setCurrentSlide] = useState(0);
-    
-    const totalSlides = 4;
-
-    function handleSliding(direction) {
-        if (direction === 'next') {
-            setCurrentSlide((prev) => (prev + 1) % totalSlides);
-        } else if (direction === 'prev') {
-            setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
-        }
-    }
+    const { currentSlide, nextSlide, prevSlide } = useSliding(4);
 
     const images = [
         "../image-product-1.jpg",
@@ -35,10 +25,10 @@ function MainSection() {
             ))}
         </div>
         <div className="direction-container">
-            <div className="prev-icon" onClick={() => handleSliding('prev')}>
+            <div className="prev-icon" onClick={prevSlide}>
                 <img src="../icon-previous.svg" alt="Previous" /> 
             </div>
-            <div className="next-icon" onClick={() => handleSliding('next')}>
+            <div className="next-icon" onClick={nextSlide}>
                 <img src="../icon-next.svg" alt="Next" /> 
             </div>
         </div>

@@ -1,64 +1,78 @@
-import { useState } from 'react';
-import './Header.css';
-import SideMenu from '../SideBar/sideBar.jsx';
-import EmptyCard from "../Empty Modal/emptyCart.jsx"
+import { useState } from "react";
+import "./Header.css";
+import SideMenu from "../SideBar/sideBar.jsx";
+import EmptyCard from "../Empty Modal/emptyCart.jsx";
 
-function NavBar({ qty, item }) {
+function NavBar({ qty, item, setItem, setAmt }) {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isCartEmpty, setIsCartEmpty] = useState(false);
 
-    const [isSidebarOpen, setIsSidebarOpen] = useState(false); 
-    const [isCartEmpty, setIsCartEmpty] = useState(false); 
+  function handleSideBar() {
+    setIsSidebarOpen(!isSidebarOpen);
+  }
 
-    function handleSideBar() {
-        setIsSidebarOpen(!isSidebarOpen);
-    }
+  function handleCloseSidebar() {
+    setIsSidebarOpen(false);
+  }
 
-    function handleCloseSidebar() {
-        setIsSidebarOpen(false);
-    }
+  function HandleEmptyCart() {
+    setIsCartEmpty(!isCartEmpty);
+  }
 
-    function HandleEmptyCart() {
-        setIsCartEmpty(!isCartEmpty);
-    }
+  return (
+    <>
+      <div className="nav-bar-container">
+        <div>
+          <img
+            className="icon-menu"
+            src="../icon-menu.svg"
+            alt="icon-menu-img"
+            onClick={handleSideBar}
+          />
+          <img src="../logo.svg" alt="Sneakers-logo-image" />
+        </div>
 
+        <div className="nav-links">
+          <span>Collections</span>
+          <span>Men</span>
+          <span>Women</span>
+          <span>About</span>
+          <span>Contact</span>
+        </div>
 
+        <div className="cart-Avatar">
+          <img
+            src="../icon-cart.svg"
+            alt="icon-menu-img"
+            className="cart"
+            onClick={HandleEmptyCart}
+          />
+          <div className="qty">
+            <span className="qty-text">{qty}</span>
+          </div>
+          <img
+            className="Avatar"
+            src="../image-avatar.png"
+            alt="Avatar-image"
+          />
+        </div>
+      </div>
 
+      {isSidebarOpen && (
+        <SideMenu isOpen={isSidebarOpen} onClose={handleCloseSidebar} />
+      )}
 
-
-    return(
-        <>
-<div className='nav-bar-container'>
-    <div>
-    <img className='icon-menu' src="../icon-menu.svg" alt="icon-menu-img" onClick={handleSideBar} />
-    <img src="../logo.svg" alt="Sneakers-logo-image" />
-
-    </div>
-
-    <div className='nav-links'>
-        <span>Collections</span>
-        <span>Men</span>
-        <span>Women</span>
-        <span>About</span>
-        <span>Contact</span>
-    </div>
-
-<div className='cart-Avatar'  >
-
-    <img src="../icon-cart.svg" alt="icon-menu-img" className='cart' onClick={HandleEmptyCart} />
-    <div className='qty'>
-        <span className='qty-text'>{qty}</span>
-    </div>
-    <img className='Avatar' src="../image-avatar.png" alt="Avatar-image" />
-</div>
-
-</div>
-
-{isSidebarOpen && <SideMenu isOpen={isSidebarOpen} onClose={handleCloseSidebar} />}
-
-{/* Pass both qty and item (product details) to EmptyCard */}
-{isCartEmpty && <EmptyCard theQty={qty} theItem={item} />}
-
-        </>
-    )
+      {/* Pass both qty and item (product details) to EmptyCard */}
+      {isCartEmpty && (
+        <EmptyCard
+          theQty={qty}
+          theItem={item}
+          setItem={setItem}
+          setAmt={setAmt}
+        />
+      )}
+    </>
+  );
 }
 
-export default NavBar
+export default NavBar;

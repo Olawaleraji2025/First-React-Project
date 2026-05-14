@@ -13,3 +13,10 @@
   -moz-osx-font-smoothing: grayscale;
 } */
 
+html {
+  min-height: 100%;
+  max-width: 1300px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+}

@@ -1,118 +1,134 @@
 /* Modal Overlay - dark semi-transparent background */
 .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-    /* display: block; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  /* display: block; */
 }
 
 /* Modal Content Container */
 .modal-content {
-    background: white;
-    border-radius: 12px;
-    padding: 20px;
-    max-width: 500px;
-    width: 90%;
-    position: relative;
-    
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 400px;
+  width: 90%;
+  position: relative;
 }
 
-.modal{
-    display: none;
+.modal {
+  display: none;
 }
 
 /* Close Button */
 .modal-close-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 8px;
-    transition: transform 0.2s ease;
+  position: absolute;
+  top: -25px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  color: #fff;
+  transition: transform 0.2s ease;
 }
 
 .modal-close-btn:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
+  color: #ff7d1a;
 }
 
 .modal-close-btn img {
-    width: 24px;
-    height: 24px;
-    filter: brightness(0) invert(1);
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
 }
 
 /* Main Product Image */
 .modal-main-image {
-    width: 100%;
-    margin-bottom: 20px;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .modal-main-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    object-fit: cover;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
 /* Thumbnails Container */
 .modal-thumbnails {
-    display: flex;
-    gap: 12px;
-    justify-content: center;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
 }
 
 /* Thumbnail Images */
 .thumbnail {
-    width: 70px;
-    height: 70px;
-    border-radius: 8px;
-    cursor: pointer;
-    object-fit: cover;
-    border: 2px solid transparent;
-    transition: all 0.2s ease;
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  cursor: pointer;
+  object-fit: cover;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
 }
 
 .thumbnail:hover {
-    border-color: #ff7d1a;
-    opacity: 0.7;
+  border-color: #ff7d1a;
+  opacity: 0.7;
 }
 
 .thumbnail.active {
-    border-color: #ff7d1a;
-    opacity: 0.5;
+  border-color: #ff7d1a;
+  opacity: 0.5;
+}
+
+.direction-container2 {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 322px;
+  justify-content: space-between;
+  top: 210px;
+}
+
+.prev-icon,
+.next-icon {
+  border-radius: 100%;
+  background: #fff;
+  padding: 2%;
 }
 
 /* Responsive Design */
 @media (max-width: 600px) {
-    .modal-content {
-        padding: 15px;
-        max-width: 350px;
-    }
+  .modal-content {
+    padding: 15px;
+    max-width: 350px;
+  }
 
-    .thumbnail {
-        width: 50px;
-        height: 50px;
-    }
+  .thumbnail {
+    width: 50px;
+    height: 50px;
+  }
 
-    .modal-thumbnails {
-        gap: 8px;
-    }
+  .modal-thumbnails {
+    gap: 8px;
+  }
 
-    .modal-close-btn {
-        top: -35px;
-    }
+  .modal-close-btn {
+    top: -35px;
+  }
 
-    .modal-close-btn img {
-        width: 20px;
-        height: 20px;
-    }
+  .modal-close-btn img {
+    width: 20px;
+    height: 20px;
+  }
 }

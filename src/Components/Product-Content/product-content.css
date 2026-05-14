@@ -1,0 +1,42 @@
+.header-5,
+.p-1 {
+  color: gray;
+}
+
+.sp-2 {
+  background-color: #000;
+  color: #ccc;
+  font-size: 14px;
+  padding: 5px;
+  border-radius: 5px;
+  margin-left: 15px;
+}
+
+.sp-3 {
+  text-decoration: line-through;
+}
+
+.price-container-1 {
+  display: flex;
+  align-items: center;
+}
+
+.price-container-2 {
+  margin-left: auto;
+}
+
+@media (min-width: 901px) {
+  .header-2 {
+    font-size: 40px;
+  }
+
+  .price-container-1 {
+    display: block;
+    font-weight: bold;
+  }
+
+  .sp-1 {
+    font-size: 27px;
+    margin-right: 10px;
+  }
+}
